@@ -1,0 +1,19 @@
+body {
+	/*background-color: #999;*/
+}
+g.tick text {
+	font-family: sans-serif;
+	font-size: 0.8em;
+}
+
+.domain {
+	fill: none;
+	stroke: black;
+	stroke-width: 1px;
+}
+
+.leftAxis {
+	font-style: italic;
+	font-size: 1.3em;
+
+}
