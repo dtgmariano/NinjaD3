@@ -1,0 +1,40 @@
+<!doctype=html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="">
+  <title>Details (WIP)</title>
+</head>
+<svg width="960" height="300"></svg>
+
+<script src="http://d3js.org/d3.v4.min.js"></script>
+
+<script type="text/javascript">
+  d3.queue()
+    .defer(d3.csv, "fakeDataRes.csv")
+    .defer(d3.csv, "fakeDataIBI.csv")
+    .await(function(error, resultsRES, resultsIBI){
+      resData = resultsRES.map((d) => {return d["Respiration"]})
+      ibiData = resultsIBI.map((d) => {return d["IBI"]})
+
+      buildLineChart(resData)
+      buildLineChart(ibiData)
+    })
+  function buildLineChart (data){
+    dummy = data
+    max = Math.max(...dummy)
+    min = Math.min(...dummy)
+    scaleY = d3.scaleLinear()
+    .domain(min, max)
+    .range([0,300]);
+    scaleX = d3.scaleLinear()
+    .domain(0, dummy.length)
+    .range(0,960);
+
+    var line = d3.line()
+    .x()
+    .y()
+  }
+</script>
+
+<body>
+</body>
