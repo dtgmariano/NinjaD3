@@ -1,39 +1,26 @@
-var data = [1, 1, 2, 3, 5, 8, 13];
+/*var canvas = d3.select("body").append("svg")
+               .attr("width", 1000)
+               .attr("height",1000);
 
-var canvas = document.querySelector("canvas"),
-    context = canvas.getContext("2d");
+var group = canvas.append("g")
+                  .attr("transform", "translate(300, 300)");
 
-var width = canvas.width,
-    height = canvas.height,
-    radius = Math.min(width, height) / 2;
+var r = 150;
 
-var colors = [
-  "#1f77b4", "#ff7f0e", "#2ca02c", "#d62728", "#9467bd",
-  "#8c564b", "#e377c2", "#7f7f7f", "#bcbd22", "#17becf"
-];
+var p = Math.PI * 2;
 
-var arc = d3.arc()
-    .outerRadius(radius - 10)
-    .innerRadius(radius - 70)
-    .padAngle(0.03)
-    .context(context);
+var arc = d3.svg.arc()
+                .innerRadius(r - 20)
+                .outerRadius(r)
+                .startAngle(0)
+                .endAngle(p*3/4)
+                .cornerRadius(10);
 
-var pie = d3.pie();
+var arc2 = d3.svg.arc()
+                .innerRadius(r/2)
+                .outerRadius(0)
+                .startAngle(0)
+                .endAngle(p);
 
-var arcs = pie(data);
-
-context.translate(width / 2, height / 2);
-
-context.globalAlpha = 0.5;
-arcs.forEach(function(d, i) {
-  context.beginPath();
-  arc(d);
-  context.fillStyle = colors[i];
-  context.fill();
-});
-
-context.globalAlpha = 1;
-context.beginPath();
-arcs.forEach(arc);
-context.lineWidth = 1.5;
-context.stroke();
+group.append("path")
+     .attr("d", arc); */

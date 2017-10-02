@@ -1,19 +1,29 @@
 body {
-	/*background-color: #999;*/
-}
-g.tick text {
-	font-family: sans-serif;
-	font-size: 0.8em;
+  background: #EEE;
+  margin: auto;
+  width: 960px;
 }
 
-.domain {
-	fill: none;
-	stroke: black;
-	stroke-width: 1px;
+.arc{
+	fill: blue;
 }
 
-.leftAxis {
-	font-style: italic;
-	font-size: 1.3em;
+.arc-text {
+  font: 16px sans-serif;
+}
 
+.arc-center {
+  fill: none;
+}
+
+#credit {
+  position: absolute;
+  font: 10px sans-serif;
+  right: 10px;
+  bottom: 10px;
+  color: #ddd;
+}
+
+#credit a {
+  color: inherit;
 }
